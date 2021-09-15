@@ -12,6 +12,7 @@ export const ProductInput = ({ products }) => {
       .doc(products.id)
       .set({ ...products, name });
   };
+
   const onDelete = () => {
     const db = firebase.firestore();
     db.collection("products").doc(products.id).delete();
@@ -25,6 +26,7 @@ export const ProductInput = ({ products }) => {
         width="230px"
         height="190px"
       />
+
       <div className="product-information">
         <div className="button-wrapper">
           <input
@@ -39,7 +41,7 @@ export const ProductInput = ({ products }) => {
           </div>
           <i className="far fa-trash-alt" onClick={onDelete} />
         </div>
-        <p>${products.price}</p>
+        <p>${products.price.toFixed(2)}</p>
         <span>{products.active}</span>
       </div>
     </>

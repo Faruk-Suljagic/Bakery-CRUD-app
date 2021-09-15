@@ -8,6 +8,8 @@ const Navbar = (props) => {
   const { user } = useAuth0();
   const [logout, setLogout] = useState(false);
 
+  console.log(user);
+
   const renderUsername = () => {
     const name = user.given_name.slice(0, 1);
     return (
