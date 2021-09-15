@@ -22,3 +22,44 @@
 .product-information {
   padding: 0px 10px;
 }
+.hiddenProduct {
+  display: none;
+}
+.add-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(132, 132, 132, 0.552);
+  border-bottom-right-radius: 12px;
+  width: 40%;
+  height: 30%;
+}
+.product-input-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.label {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  color: #fff;
+}
+
+.label input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: rgba(198, 198, 198, 0.476);
+  outline: none;
+}
+
+.label input:hover {
+  transform: scale(1.02);
+}
+.active-information {
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  color: rebeccapurple;
+}

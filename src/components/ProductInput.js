@@ -42,7 +42,9 @@ export const ProductInput = ({ products }) => {
           <i className="far fa-trash-alt" onClick={onDelete} />
         </div>
         <p>${products.price.toFixed(2)}</p>
-        <span>{products.active}</span>
+        <span>
+          Available: {products.active === true ? "Available" : "Unavailable"}
+        </span>
       </div>
     </>
   );

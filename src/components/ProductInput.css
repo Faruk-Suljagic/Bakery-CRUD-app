@@ -22,6 +22,10 @@
 .product-information {
   padding: 0px;
 }
+.product-information input:disabled {
+  color: #000000;
+  font-size: inherit;
+}
 .button-wrapper {
   width: 100%;
   display: flex;

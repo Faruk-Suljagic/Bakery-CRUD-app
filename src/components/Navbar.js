@@ -18,17 +18,29 @@ const Navbar = (props) => {
       </p>
     );
   };
+  const renderNickname = () => {
+    return <p>{user.nickname}</p>;
+  };
+  console.log(user);
+
   return (
     <>
-      {/* {JSON.stringify(user, null, 2)} */}
       {user ? (
         <div className="navbar">
           <div className="logo">
             <img src={logoone} width="55px" height="55px" alt="logo" />
             <h2>Dream Bakery</h2>
+            <button onClick={() => props.setToggleAdd(!props.toggleAdd)}>
+              Add
+            </button>
           </div>
+
           <div className="wrapper">
-            <span>{renderUsername()}</span>
+            <span>
+              {user.given_name && user.family_name
+                ? renderUsername()
+                : renderNickname()}{" "}
+            </span>
           </div>
           <img
             style={{ borderRadius: "50%" }}
