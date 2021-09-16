@@ -45,6 +45,7 @@ const Products = () => {
         toggleAdd={toggleAdd}
         setToggleAdd={setToggleAdd}
         priced={products.price}
+        active={products.active}
       />
       <div className={toggleAdd === true ? "add-product" : "hiddenProduct"}>
         <div className="product-input-wrapper">
@@ -53,6 +54,7 @@ const Products = () => {
             <div className="label">
               <label>Name:</label>
               <input
+                autoFocus
                 value={newProduct}
                 onChange={(e) => setNewProduct(e.target.value)}
               />

@@ -4,6 +4,7 @@ import "./ProductInput.css";
 
 export const ProductInput = ({ products }) => {
   const [name, setName] = useState(products.name);
+
   const [toggleInput, setToggleInput] = useState(false);
 
   const onUpdate = () => {
@@ -30,10 +31,11 @@ export const ProductInput = ({ products }) => {
       <div className="product-information">
         <div className="button-wrapper">
           <input
+            autoFocus
             disabled={!toggleInput}
             defaultValue={products.name}
             placeholder={products.name}
-            className={toggleInput === false ? "hideInput" : null}
+            className={toggleInput === false ? "hideInput" : "showInput"}
             onChange={(e) => setName(e.target.value)}
           />
           <div onClick={() => setToggleInput(!toggleInput)}>

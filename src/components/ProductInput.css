@@ -36,6 +36,13 @@
   border: none;
   background-color: transparent;
 }
+.showInput {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: rgba(198, 198, 198, 0.476);
+  outline: none;
+}
 .fu {
   color: #fff;
 }
